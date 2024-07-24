@@ -9,8 +9,7 @@ body {
   flex: 1;
 }
 
-/* Navmbar */
-
+/* Navbar */
 .navbar {
   height: 5rem;
   background-color: #ffffffff;
@@ -25,43 +24,39 @@ body {
   color: #222222 !important;
 }
 
-/* footer */
-
-.f-info-links a {
-  text-decoration: none;
-  color: #222222;
-}
-.f-info-links a:hover {
-  text-decoration: underline;
+/* Footer */
+.f-info {
+  text-align: center;
+  background-color: #ebebeb;
+  padding: 2rem 0;
 }
 
 .f-info-links,
 .f-info-socials,
 .f-info-brand {
-  vertical-align: middle;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+  margin: 0 0.5rem;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
 }
 
 .f-info-socials i {
   font-size: 1.2rem;
-  margin-right: 1rem;
-}
-
-.f-info {
-  text-align: center;
-  height: 8rem;
-  background-color: #ebebeb;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: space-evenly;
+  margin: 0 0.5rem;
 }
 
 /* Card */
-
 .listing-card {
   border: none !important;
   margin-bottom: 2rem;
@@ -71,10 +66,11 @@ body {
   border-radius: 1rem !important;
   width: 100% !important;
   object-fit: cover !important;
+  aspect-ratio: 1 / 1;
 }
 
 .card-body {
-  padding: 0rem !important;
+  padding: 1rem 0 !important;
 }
 
 .card-text {
@@ -83,12 +79,13 @@ body {
 
 .listing-link {
   text-decoration: none;
+  color: inherit;
 }
 
 /* Card Effect */
-
 .card-img-overlay {
   opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .card-img-overlay:hover {
@@ -103,13 +100,15 @@ body {
 }
 
 /* Show Page */
-
 .show-img {
   height: 30vh;
+  object-fit: cover;
 }
 
 .btns {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .show-card {
@@ -117,10 +116,55 @@ body {
   padding-right: 0;
 }
 
-/* map */
-
+/* Map */
 #map {
- height: 400px;
- width: 80vh;
-margin-bottom: 10px;
+  height: 400px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .f-info {
+    padding: 1rem 0;
+  }
+
+  .f-info-links,
+  .f-info-socials,
+  .f-info-brand {
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+
+  .f-info-links a,
+  .f-info-socials i {
+    margin: 0.25rem 0;
+  }
+
+  .show-img {
+    height: 25vh;
+  }
+
+  #map {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    aspect-ratio: 4 / 3;
+  }
+
+  .show-img {
+    height: 20vh;
+  }
+
+  #map {
+    height: 250px;
+  }
 }
