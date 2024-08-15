@@ -1,11 +1,6 @@
 <%- layout('/layouts/boilerplate.ejs') %>
 
 <body>
-  <!-- <h3>All listings</h3> -->
-  <!-- <form method="GET" action="/listings/new">
-      <button>Create New Listing</button>
-    </form> -->
-
   <style>
     #filters {
       display: flex;
@@ -18,10 +13,7 @@
       margin-right: 2rem;
       margin-top: 2rem;
       opacity: 0.7;
-    }
-    .filter:hover {
-      opacity: 1;
-      cursor: pointer;
+      cursor: not-allowed; /* Change cursor to indicate it's not clickable */
     }
 
     .filter p {
@@ -31,6 +23,7 @@
     .tax-info {
       display: none;
     }
+
     .tax-toggle {
       border: 1px solid black;
       border-radius: 1rem;
@@ -43,67 +36,67 @@
   </style>
 
   <div id="filters">
-    <div class="filter">
+    <div class="filter" onclick="showWarning()">
       <div>
         <i class="fa-solid fa-fire"></i>
       </div>
       <p>Trending</p>
     </div>
-    <div class="filter">
+    <div class="filter" onclick="showWarning()">
       <div>
         <i class="fa-solid fa-bed"></i>
       </div>
       <p>Rooms</p>
     </div>
-    <div class="filter">
+    <div class="filter" onclick="showWarning()">
       <div>
         <i class="fa-solid fa-mountain-city"></i>
       </div>
       <p>Iconic cities</p>
     </div>
-    <div class="filter">
+    <div class="filter" onclick="showWarning()">
       <div>
         <i class="fa-solid fa-mountain"></i>
       </div>
       <p>Mountain</p>
     </div>
-    <div class="filter">
+    <div class="filter" onclick="showWarning()">
       <div>
         <i class="fa-brands fa-fort-awesome"></i>
       </div>
       <p>Castles</p>
     </div>
-    <div class="filter">
+    <div class="filter" onclick="showWarning()">
       <div>
         <i class="fa-solid fa-person-swimming"></i>
       </div>
       <p>Amazing Pool</p>
     </div>
-    <div class="filter">
+    <div class="filter" onclick="showWarning()">
       <div>
         <i class="fa-brands fa-campground"></i>
       </div>
       <p>Camping</p>
     </div>
-    <div class="filter">
+    <div class="filter" onclick="showWarning()">
       <div>
         <i class="fa-solid fa-cow"></i>
       </div>
       <p>Farms</p>
     </div>
-    <div class="filter">
+    <div class="filter" onclick="showWarning()">
       <div>
         <i class="fa-regular fa-snowflake"></i>
       </div>
       <p>Arctic</p>
     </div>
-    <div class="filter">
+    <div class="filter" onclick="showWarning()">
       <div>
         <i class="fa-solid fa-igloo"></i>
       </div>
       <p>Domes</p>
     </div>
-    <div class="filter">
+    <div class="filter" onclick="showWarning()">
       <div>
         <i class="fa-solid fa-sailboat"></i>
       </div>
@@ -163,4 +156,8 @@
       }
     }
   });
+
+  function showWarning() {
+    alert("This feature is not available yet.");
+  }
 </script>
